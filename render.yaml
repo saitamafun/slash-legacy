@@ -27,7 +27,7 @@ services:
     runtime: docker
     plan: starter
     autoDeploy: true
-    dockerfilePath: ./servers/docs/Dockerfile
+    dockerfilePath: ./apps/docs/Dockerfile
     buildFilter:
       paths:
         - servers/docs/**/*.ts
