@@ -1,0 +1,39 @@
+services:
+  - type: web
+    name: bird
+    runtime: docker
+    plan: starter
+    autoDeploy: true
+    dockerfilePath: ./servers/bird/Dockerfile
+    buildFilter:
+      paths:
+        - servers/bird/**/*.ts
+        - packages/tsconfig/*.json
+    envVars:
+      - fromGroup: servers/bird
+      - key: DATABASE_URL
+        fromDatabase:
+          name: birdDB
+          property: connectionString
+      - key: APP_URL
+        fromService:
+          type: web
+          name: exma
+          envVarKey: RENDER_EXTERNAL_URL
+    domains:
+        - "bot.gateway.saitama.fun"
+  - type: web
+    name: docs
+    runtime: docker
+    plan: starter
+    autoDeploy: true
+    dockerfilePath: ./servers/docs/Dockerfile
+    buildFilter:
+      paths:
+        - servers/docs/**/*.ts
+    domains:
+        - "saitama.fun"
+databases:
+  - name: birdDB
+    user: admin
+    plan: starter

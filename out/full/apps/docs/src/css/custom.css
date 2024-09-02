@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  svg {
+    display: inline;
+  }
+  
+  .btn {
+    @apply flex items-center justify-center cursor-pointer;
+  }
+
+  .btn-primary {
+    @apply bg-violet-500 text-black;
+  }
+
+  .btn-secondary {
+    @apply bg-transparent border border-stone-700 text-violet-500;
+  }
+
+  button {
+    border: 0;
+    outline: 0;
+  }
+}
