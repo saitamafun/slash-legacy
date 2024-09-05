@@ -3,14 +3,14 @@ import IlFeature from "../../../static/img/il_feature.svg";
 
 export default function HomeHeroSection() {
   return (
-    <section className="flex flex-col space-y-8 px-4 md:px-8 md:flex-row md:space-x-8 xl:px-32">
+    <section className="h-screen flex flex-col items-center space-y-8 px-4 md:px-8 md:flex-row md:space-x-8 xl:self-center">
       <div className="flex flex-col space-y-4 md:max-w-lg xl:max-w-2xl">
-        <div className="flex flex-col">
-          <h1 className="text-4xl font-black md:text-5xl xl:text-7xl">
-            <span className="text-white/75">Create</span> ondemand&nbsp;
-            <span className="text-white/75">Wallet</span> for your app
+        <div className="flex flex-col space-y-2">
+          <h1 className="text-4xl font-mono font-black md:text-6xl xl:text-7xl">
+            <span className="text-white animate-pulse">Create</span> ondemand&nbsp;
+            <span className="text-white animate-pulse">Wallet</span> for your app
           </h1>
-          <p>
+          <p className="max-w-sm">
             An sdk and api for creating ondemand custodian wallets for your web3
             application.
           </p>
@@ -35,7 +35,7 @@ export default function HomeHeroSection() {
         <IlFeature
           width={512}
           height={512}
-          className="w-sm h-sm mx-auto md:w-sm md:h-sm"
+          className="w-sm h-sm mx-auto md:w-sm md:h-sm xl:w-auto xl:h-auto"
         />
       </div>
     </section>

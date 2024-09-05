@@ -14,9 +14,9 @@ const connectCode = [
 ];
 
 const FeatureBlock = ({ title, description, media }: FeatureBlockProps) => (
-  <div className="flex flex-col space-y-4 bg-black/40 px-4 rounded-xl  md:flex-1 md:px-8 md:w-sm xl:w-xs">
+  <div className="lt-md:w-full h-md flex flex-col space-y-4 bg-black/40 px-4 rounded-xl md:px-8 md:flex-1 md:w-1/2">
     <div className="flex flex-col pt-8">
-      <h4 className="text-xl font-extrabold uppercase">{title}</h4>
+      <h4 className="text-xl font-mono font-extrabold uppercase">{title}</h4>
       <p className="text-sm text-white/75 max-w-md">{description}</p>
     </div>
     <div className="flex-1 flex flex-col justify-end">{media}</div>
@@ -25,7 +25,7 @@ const FeatureBlock = ({ title, description, media }: FeatureBlockProps) => (
 
 export default function HomeFeature() {
   return (
-    <section className="flex flex-col space-y-8 px-4 md:flex-row md:space-y-0 md:space-x-4 md:px-8 xl:px-32">
+    <section className="h-screen flex flex-col items-center  px-4 md:flex-row lt-md:space-y-8 md:space-x-4 md:px-8 xl:w-full">
       <FeatureBlock
         title="Connection"
         description="Integrate wallet in few lines of
@@ -33,7 +33,7 @@ export default function HomeFeature() {
         media={
           <Code
             children={connectCode}
-            className="rounded-t-xl xl:w-3/4 xl:mx-auto"
+            className="rounded-t-xl  xl:w-3/4 xl:mx-auto"
           />
         }
       />

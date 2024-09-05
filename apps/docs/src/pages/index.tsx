@@ -3,7 +3,7 @@ import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 
 import HomeFeature from "../components/home/HomeFeature";
 import HomeHeroSection from "../components/home/HomeHeroSection";
-import HomeEndNote from "../components/home/HomeEndNote";
+import HomeNote from "../components/home/HomeNote";
 
 export default function HomaPage() {
   const { siteConfig } = useDocusaurusContext();
@@ -12,11 +12,13 @@ export default function HomaPage() {
     <Layout
       title={siteConfig.title}
       description=""
-      wrapperClassName="flex flex-col space-y-16 pt-16"
+      wrapperClassName="flex flex-col lt-md:py-16"
     >
-      <HomeHeroSection />
-      <HomeFeature />
-      <HomeEndNote />
+      <main className="flex flex-col lt-md:space-y-32 xl:max-w-7xl xl:self-center">
+        <HomeHeroSection />
+        <HomeFeature />
+        <HomeNote />
+      </main>
     </Layout>
   );
 }

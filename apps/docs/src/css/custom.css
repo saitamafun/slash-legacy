@@ -23,6 +23,10 @@
     @apply flex items-center justify-center cursor-pointer;
   }
 
+  .btn:hover {
+    @apply opacity-75;
+  }
+
   .btn-primary {
     @apply bg-white! text-black!;
   }
@@ -99,4 +103,57 @@
   src: url("../../static/fonts/poppins/Poppins-Black.ttf") format("truetype");
   font-weight: 900;
   font-style: normal;
+}
+
+@font-face {
+  font-family: "Oswald";
+  src: url("../../static/fonts/oswald/Oswald-ExtraLight.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Oswald";
+  src: url("../../static/fonts/oswald/Oswald-Light.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Oswald";
+  src: url("../../static/fonts/oswald/Oswald-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Oswald";
+  src: url("../../static/fonts/oswald/Oswald-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Oswald";
+  src: url("../../static/fonts/oswald/Oswald-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Oswald";
+  src: url("../../static/fonts/oswald/Oswald-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../../static/fonts/roboto/Roboto-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+a {
+  text-decoration: none !important;
 }

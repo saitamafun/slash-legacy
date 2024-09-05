@@ -16,13 +16,13 @@ export default function Logo({
   return (
     <Link
       to="/"
-      className="flex items-center p-4 hover:opacity-50 cursor-pointer md:px-8 hover:text-white/75"
+      className="flex items-center hover:opacity-50 cursor-pointer hover:text-white/75"
     >
       <IlLogo
         width={width}
         height={height}
       />
-      <span className={clsx("text-xl font-black hover:decoration-none", className)}>aitama</span>
+      <span className={clsx("text-xl font-roboto font-black hover:decoration-none", className)}>aitama</span>
     </Link>
   );
 }

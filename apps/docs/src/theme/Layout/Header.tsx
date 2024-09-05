@@ -11,8 +11,8 @@ export default function Header({ className }: PropsWithClassName) {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className={clsx(className, "flex items-center")}>
-      <Logo />
+    <header className={clsx(className, "flex items-center pl-4 md:pl-8")}>
+      <Logo className="!text-3xl" />
       <div className="flex-1 relative">
         <NavBar
           open={open}

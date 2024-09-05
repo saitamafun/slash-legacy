@@ -7,6 +7,8 @@ export default defineConfig({
   theme: {
     fontFamily: {
       sans: "Poppins",
+      mono: "Oswald",
+      roboto: "Roboto",
     },
   },
   presets: [presetUno()],
