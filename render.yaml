@@ -20,7 +20,7 @@ services:
           type: web
           name: exma
           envVarKey: RENDER_EXTERNAL_URL
-    domains:
+    domains: 
         - "bot.gateway.saitama.fun"
   - type: web
     name: docs

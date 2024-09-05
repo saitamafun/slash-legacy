@@ -18,10 +18,14 @@
     "@docusaurus/core": "3.5.2",
     "@docusaurus/preset-classic": "3.5.2",
     "@mdx-js/react": "^3.0.0",
+    "@unocss/postcss": "^0.62.3",
+    "@unocss/reset": "^0.62.3",
     "clsx": "^2.0.0",
     "prism-react-renderer": "^2.3.0",
     "react": "^18.0.0",
-    "react-dom": "^18.0.0"
+    "react-dom": "^18.0.0",
+    "react-icons": "^5.3.0",
+    "unocss": "^0.62.3"
   },
   "devDependencies": {
     "@docusaurus/module-type-aliases": "3.5.2",
@@ -29,7 +33,6 @@
     "@docusaurus/types": "3.5.2",
     "autoprefixer": "^10.4.20",
     "postcss": "^8.4.43",
-    "tailwindcss": "^3.4.10",
     "typescript": "latest"
   },
   "browserslist": {

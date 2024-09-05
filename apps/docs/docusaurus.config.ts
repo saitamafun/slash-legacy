@@ -1,8 +1,9 @@
-import { themes as prismThemes } from "prism-react-renderer";
 import type { Config } from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
 
-import tailwindPlugin from "./plugins/tailwind-config.cjs";
+import { themes as prismThemes } from "prism-react-renderer";
+
+import unocssPlugin from "./plugins/unocss.plugin.cjs";
 
 const config: Config = {
   baseUrl: "/",
@@ -10,7 +11,7 @@ const config: Config = {
   tagline: "Saitama is fun",
   favicon: "img/favicon.ico",
   url: "https://saitama.fun/",
-  
+
   organizationName: "saitamafun",
   projectName: "slash",
   onBrokenLinks: "throw",
@@ -117,10 +118,15 @@ const config: Config = {
     },
     prism: {
       theme: prismThemes.github,
-      darkTheme: prismThemes.dracula,
+      darkTheme: {
+        plain: {
+          background: "transparent",
+        },
+        styles: prismThemes.dracula.styles,
+      },
     },
   } satisfies Preset.ThemeConfig,
-  plugins: [tailwindPlugin],
+  plugins: [unocssPlugin],
 };
 
 export default config;
