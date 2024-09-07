@@ -43,7 +43,7 @@ export default function Layout(props: Props): JSX.Element {
           ThemeClassNames.wrapper.main,
           styles.mainWrapper,
           wrapperClassName,
-          "overflow-x-hidden"
+          "overflow-x-hidden overflow-y-scroll"
         )}
       >
         <ErrorBoundary fallback={(params) => <ErrorPageContent {...params} />}>

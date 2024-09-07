@@ -16,11 +16,11 @@ export default function Header({ className }: PropsWithClassName) {
 
   return (
     <header
-      className={clsx(className, "flex flex-col justify-center", {
+      className={clsx(className, "flex flex-col justify-center  lt-md:pt-14", {
         "md:bg-dark": isDocPage,
       })}
     >
-      <div className="static top-0 flex items-center pl-4 md:py-4">
+      <div className="flex items-center pl-4  lt-md:fixed lt-md:top-0 lt-md:inset-x-0 lt-md:bg-[var(--ifm-background-color)] md:py-4">
         <Logo
           className="md:text-2xl"
           iconClassName="lt-md:w-6 lt-md:h-6"

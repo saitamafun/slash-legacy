@@ -64,6 +64,20 @@
   a {
     @apply decoration-none! flex items-center;
   }
+
+  pre {
+    @apply text-sm!;
+  }
+}
+
+*::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+* {
+  scrollbar-width: none;
 }
 
 @font-face {

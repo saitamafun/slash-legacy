@@ -2,7 +2,6 @@ import clsx from "clsx";
 import { MdChevronRight } from "react-icons/md";
 import { HiOutlineMenuAlt2 } from "react-icons/hi";
 import Translate from "@docusaurus/Translate";
-import DocSidebar from "@theme/DocSidebar";
 
 type DocHeaderProps = {
   className?: string;
@@ -21,7 +20,7 @@ export default function DocHeader({ className }: DocHeaderProps) {
               ) as HTMLElement;
 
               sidebar.style.display = "flex";
-              console.log(sidebar.style.display)
+              console.log(sidebar.style.display);
             }}
           >
             <HiOutlineMenuAlt2 />

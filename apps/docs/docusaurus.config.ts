@@ -120,7 +120,7 @@ const config: Config = {
       theme: prismThemes.github,
       darkTheme: {
         plain: {
-          background: "transparent",
+          background: "black",
         },
         styles: prismThemes.dracula.styles,
       },
