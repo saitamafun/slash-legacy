@@ -1,4 +1,6 @@
 ---
+nofooter: true
+title: Introduction
 ---
 
 # Introduction

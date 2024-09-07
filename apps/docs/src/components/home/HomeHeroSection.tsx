@@ -3,10 +3,10 @@ import IlFeature from "../../../static/img/il_feature.svg";
 
 export default function HomeHeroSection() {
   return (
-    <section className="h-screen flex flex-col items-center space-y-8 px-4 md:px-8 md:flex-row md:space-x-8 xl:self-center">
+    <section className="h-screen flex flex-col space-y-8 px-4 md:px-8 md:flex-row md:items-center md:space-x-8 xl:self-center">
       <div className="flex flex-col space-y-4 md:max-w-lg xl:max-w-2xl">
         <div className="flex flex-col space-y-2">
-          <h1 className="text-4xl font-mono font-black md:text-6xl xl:text-7xl">
+          <h1 className="text-4xl font-mono font-black lt-md:w-xs md:text-6xl xl:text-7xl">
             <span className="text-white animate-pulse">Create</span> ondemand&nbsp;
             <span className="text-white animate-pulse">Wallet</span> for your app
           </h1>
@@ -17,7 +17,7 @@ export default function HomeHeroSection() {
         </div>
         <div className="flex items-center space-x-4">
           <Link
-            to="docs/intro"
+            to="/docs/intro"
             className="btn btn-primary px-4 py-2 rounded"
           >
             Get Started

@@ -1,9 +1,9 @@
 import clsx from "clsx";
 import Link from "@docusaurus/Link";
 
-import { FaDiscord, FaX, FaXTwitter } from "react-icons/fa6";
 import { IconType } from "react-icons";
 import { FaTelegramPlane } from "react-icons/fa";
+import { FaDiscord, FaXTwitter } from "react-icons/fa6";
 
 import { PropsWithClassName } from "@site/src/global.t";
 import Logo from "@site/src/components/Logo";
@@ -34,7 +34,12 @@ const socials: Social[] = [
 
 export default function Footer({ className }: PropsWithClassName) {
   return (
-    <footer className={clsx(className, "flex flex-col space-y-4 p-4 md:px-8")}>
+    <footer
+      className={clsx(
+        className,
+        "flex lt-md:items-center p-4 md:px-8"
+      )}
+    >
       <div>
         <Logo
           width={16}
@@ -42,18 +47,18 @@ export default function Footer({ className }: PropsWithClassName) {
           className="text-sm"
         />
         <p className="lt-md:text-sm text-white/75">
-          © 2024 Saitama. All Rights Reserved.
+          © {new Date().getFullYear()} Saitama. All Rights Reserved.
         </p>
       </div>
-      <div className="flex-1 flex items-center space-x-2 lt-md:justify-end ">
+      <div className="flex-1 flex items-center space-x-2 justify-end">
         {socials.map((social, index) => (
           <Link
             key={index}
             to={social.link}
             target="_blank"
-            className="p-3 bg-black/50 rounded-full hover:text-white/75 cursor-pointer"
+            className="p-2 bg-black/50 rounded-full hover:text-white/75 cursor-pointer"
           >
-            <social.icon className="text-xl" />
+            <social.icon className="md:text-xl" />
           </Link>
         ))}
       </div>

@@ -6,12 +6,14 @@ type LogoProps = {
   width?: number;
   height?: number;
   className?: string;
+  iconClassName?: string
 };
 
 export default function Logo({
-  width = 24,
-  height = 24,
+  width = 18,
+  height = 18,
   className,
+  iconClassName
 }: LogoProps) {
   return (
     <Link
@@ -21,6 +23,7 @@ export default function Logo({
       <IlLogo
         width={width}
         height={height}
+        className={iconClassName}
       />
       <span className={clsx("text-xl font-roboto font-black hover:decoration-none", className)}>aitama</span>
     </Link>

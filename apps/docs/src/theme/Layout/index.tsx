@@ -19,9 +19,12 @@ import Footer from "./Footer";
 import Header from "./Header";
 
 import styles from "./styles.module.css";
+import { useLocation } from "@docusaurus/router";
 
 export default function Layout(props: Props): JSX.Element {
   const { children, noFooter, wrapperClassName, title, description } = props;
+
+  const { pathname } = useLocation();
 
   useKeyboardNavigation();
 
@@ -31,13 +34,9 @@ export default function Layout(props: Props): JSX.Element {
         title={title}
         description={description}
       />
-
       <SkipToContent />
-
       <AnnouncementBar />
-
       <Header />
-
       <div
         id={SkipToContentFallbackId}
         className={clsx(
@@ -51,8 +50,7 @@ export default function Layout(props: Props): JSX.Element {
           {children}
         </ErrorBoundary>
       </div>
-
-      {!noFooter && <Footer />}
+      {!noFooter && !pathname.includes("docs") && <Footer />}
     </LayoutProvider>
   );
 }

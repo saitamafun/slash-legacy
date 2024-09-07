@@ -125,6 +125,12 @@ const config: Config = {
         styles: prismThemes.dracula.styles,
       },
     },
+    algolia: {
+      appId: "ILVRD29XIH",
+      apiKey: "83ebc355c208c461e51f7f8bb8082f29",
+      indexName: "saitama_docs",
+      contextualSearch: true,
+    },
   } satisfies Preset.ThemeConfig,
   plugins: [unocssPlugin],
 };

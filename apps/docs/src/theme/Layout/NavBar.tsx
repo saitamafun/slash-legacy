@@ -37,7 +37,7 @@ export default function NavBar({ open, setOpen }: NavBarProps) {
   return (
     <nav
       className={clsx(
-        "absolute inset-x-0 bg-black/75 backdrop-blur-sm p-4 flex flex-col text-sm lt-md:rounded-md md:static md:flex-row md:items-center md:justify-center md:bg-transparent md:p-0",
+        "absolute inset-x-0 bg-black/75 backdrop-blur-sm p-4 flex flex-col text-sm lt-md:rounded-md lt-md:z-100 md:static md:flex-row md:items-center md:justify-center md:bg-transparent md:p-0",
         open
           ? "lt-md:animate-fade-in lt-md:animate-duration-150"
           : "lt-md:hidden"

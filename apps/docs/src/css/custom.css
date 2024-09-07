@@ -1,30 +1,49 @@
-@import "@unocss/reset/tailwind";
-
 @unocss preflights;
 @unocss default;
 @unocss;
 
 [data-theme="dark"] {
-  --ifm-color-primary: #8b5cf6;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #4c1d95;
-  --ifm-color-primary-darkest: #3b0764;
-  --ifm-color-primary-light: #a78bfa;
-  --ifm-color-primary-lighter: #c4b5fd;
-  --ifm-color-primary-lightest: #ddd6fe;
+  --ifm-color-primary: #ffffff;
+  --ifm-color-primary-dark: #ffffff;
+  --ifm-color-primary-darker: #ffffff;
+  --ifm-color-primary-darkest: #ffffff;
+  --ifm-color-primary-light: #ffffff;
+  --ifm-color-primary-lighter: #ffffff;
+  --ifm-color-primary-lightest: #ffffff;
+}
+
+[data-theme="dark"] .DocSearch {
+  --docsearch-container-background: rgba(0, 0, 0, 0.7);
+  --docsearch-modal-background: var(--ifm-background-color);
+  --docsearch-searchbox-background: var(--ifm-color-black);
+  --docsearch-searchbox-focus-background: var(--ifm-color-black);
+  --docsearch-hit-color: var(--ifm-font-color-base);
+  --docsearch-hit-active-color: var(--ifm-color-white);
+  --docsearch-hit-background: var(--ifm-color-emphasis-100);
+
+  --docsearch-footer-background: var(--ifm-background-surface-color);
+  --docsearch-key-gradient: linear-gradient(
+    -26.5deg,
+    var(--ifm-color-emphasis-200) 0%,
+    var(--ifm-color-emphasis-100) 100%
+  );
 }
 
 @layer base {
   svg {
-    display: inline;
+    @apply inline-block my-auto;
+  }
+
+  button {
+    @apply bg-transparent cursor-pointer hover:outline-none focus:outline-none;
+  }
+
+  button:hover {
+    @apply opacity-75;
   }
 
   .btn {
     @apply flex items-center justify-center cursor-pointer;
-  }
-
-  .btn:hover {
-    @apply opacity-75;
   }
 
   .btn-primary {
@@ -38,6 +57,10 @@
   button {
     border: 0;
     outline: 0;
+  }
+
+  a {
+    @apply decoration-none! flex items-center;
   }
 }
 
@@ -152,8 +175,4 @@
   src: url("../../static/fonts/roboto/Roboto-Black.ttf") format("truetype");
   font-weight: 900;
   font-style: normal;
-}
-
-a {
-  text-decoration: none !important;
 }
