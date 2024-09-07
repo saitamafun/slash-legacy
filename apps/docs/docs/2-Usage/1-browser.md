@@ -1,5 +1,5 @@
 ---
-title: Browser Usage
+title: Browser usage
 ---
 
 
@@ -7,7 +7,7 @@ title: Browser Usage
 
 To use directly in browser as a standalone widget.
 
-### Setup 
+## Setup 
 This examples assume you are writing using esm and transpiling using webpack or vite.
 
 ### Import Adapter
@@ -17,9 +17,6 @@ import SaitamaWalletAdapter from "@saitama/wallet/adapter";
 ```
 
 ### Initialize 
-
-To get accessToken [Contact developer](https://x.com/saitamadotfun)
-
 
 ``` ts
 const adapter = new SaitamaWalletAdapter({

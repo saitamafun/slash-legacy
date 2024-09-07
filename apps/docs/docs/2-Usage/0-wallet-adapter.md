@@ -1,8 +1,8 @@
 ---
-title: Solana Wallet Adapter
+title: Solana wallet adapter
 ---
 
-# Solana Wallet Adapter
+# Solana wallet adapter
 
 To use `@saitamafun/wallet` with solana adapter and react, first you need install the following packages.
 
