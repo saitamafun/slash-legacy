@@ -15,11 +15,15 @@ export default function Header({ className }: PropsWithClassName) {
   const isDocPage = useIsDocPage();
 
   return (
-    <header className={clsx(className, "flex flex-col justify-center md:bg-dark pl-4 md:px-8")}>
-      <div className="static top-0 flex items-center md:py-4">
+    <header
+      className={clsx(className, "flex flex-col justify-center", {
+        "md:bg-dark": isDocPage,
+      })}
+    >
+      <div className="static top-0 flex items-center pl-4 md:py-4">
         <Logo
           className="md:text-2xl"
-          iconClassName="lt-md:w-4 lt-md:h-4"
+          iconClassName="lt-md:w-6 lt-md:h-6"
         />
         <div className="flex-1 relative">
           <NavBar

@@ -1,6 +1,7 @@
 ---
 nofooter: true
 title: Introduction
+slug: /
 ---
 
 # Introduction

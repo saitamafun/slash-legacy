@@ -1,6 +1,8 @@
 import clsx from "clsx";
 import Link from "@docusaurus/Link";
 
+import "@unocss/reset/sanitize/sanitize.css"
+
 import { IconType } from "react-icons";
 import { FaTelegramPlane } from "react-icons/fa";
 import { FaDiscord, FaXTwitter } from "react-icons/fa6";
@@ -34,33 +36,31 @@ const socials: Social[] = [
 
 export default function Footer({ className }: PropsWithClassName) {
   return (
-    <footer
-      className={clsx(
-        className,
-        "flex lt-md:items-center p-4 md:px-8"
-      )}
-    >
-      <div>
-        <Logo
-          width={16}
-          height={16}
-          className="text-sm"
-        />
-        <p className="lt-md:text-sm text-white/75">
-          © {new Date().getFullYear()} Saitama. All Rights Reserved.
-        </p>
-      </div>
-      <div className="flex-1 flex items-center space-x-2 justify-end">
-        {socials.map((social, index) => (
-          <Link
-            key={index}
-            to={social.link}
-            target="_blank"
-            className="p-2 bg-black/50 rounded-full hover:text-white/75 cursor-pointer"
-          >
-            <social.icon className="md:text-xl" />
-          </Link>
-        ))}
+    <footer className={clsx(className, "flex flex-col space-y-2  p-4 md:px-8")}>
+      <div className="flex">
+        <div className="flex-1">
+          <Logo
+            width={16}
+            height={16}
+            className="text-sm"
+          />
+          <p className="lt-md:text-sm text-white/75">
+            © {new Date().getFullYear()} Saitama, <br className="md:hidden" />
+            &nbsp;All Rights Reserved.
+          </p>
+        </div>
+        <div className="flex items-center space-x-2">
+          {socials.map((social, index) => (
+            <Link
+              key={index}
+              to={social.link}
+              target="_blank"
+              className="p-2 bg-black/50 rounded-md cursor-pointer hover:text-white/75"
+            >
+              <social.icon className="md:text-xl" />
+            </Link>
+          ))}
+        </div>
       </div>
     </footer>
   );

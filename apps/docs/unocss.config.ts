@@ -1,4 +1,4 @@
-import { defineConfig, presetUno } from "unocss";
+import { defineConfig, presetUno, presetTypography } from "unocss";
 
 export default defineConfig({
   content: {
@@ -11,5 +11,5 @@ export default defineConfig({
       roboto: "Roboto",
     },
   },
-  presets: [presetUno()],
+  presets: [presetUno(), presetTypography()],
 });

@@ -25,7 +25,7 @@ export default function Logo({
         height={height}
         className={iconClassName}
       />
-      <span className={clsx("text-xl font-roboto font-black hover:decoration-none", className)}>aitama</span>
+      <span className={clsx("text-2xl font-roboto font-black hover:decoration-none", className)}>aitama</span>
     </Link>
   );
 }

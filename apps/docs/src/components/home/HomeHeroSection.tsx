@@ -17,7 +17,7 @@ export default function HomeHeroSection() {
         </div>
         <div className="flex items-center space-x-4">
           <Link
-            to="/docs/intro"
+            to="/docs/"
             className="btn btn-primary px-4 py-2 rounded"
           >
             Get Started

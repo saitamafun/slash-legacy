@@ -51,7 +51,7 @@ export default function NavBar({ open, setOpen }: NavBarProps) {
             key={index}
             to={navigation.path}
             className={clsx(
-              "p-2 hover:text-white",
+              "p-2 text-sm md:text-base hover:text-white",
               active ? "text-white" : "text-white/75"
             )}
           >

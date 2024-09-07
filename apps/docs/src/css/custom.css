@@ -1,3 +1,5 @@
+@import "@unocss/reset/tailwind";
+
 @unocss preflights;
 @unocss default;
 @unocss;
@@ -31,7 +33,7 @@
 
 @layer base {
   svg {
-    @apply inline-block my-auto;
+    @apply inline-block;
   }
 
   button {
