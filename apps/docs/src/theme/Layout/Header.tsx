@@ -1,26 +1,33 @@
 import clsx from "clsx";
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
 import SearchBar from "@theme/SearchBar";
+import { useNavbarMobileSidebar } from "@docusaurus/theme-common/internal";
 
 import Logo from "@site/src/components/Logo";
 import { PropsWithClassName } from "@site/src/global.t";
+import useIsDocPage from "@site/src/composables/useIsDocPage";
 
 import NavBar from "./NavBar";
 import DocHeader from "./DocHeader";
-import useIsDocPage from "@site/src/composables/useIsDocPage";
 
 export default function Header({ className }: PropsWithClassName) {
-  const [open, setOpen] = useState(false);
   const isDocPage = useIsDocPage();
+  const mobileSidebar = useNavbarMobileSidebar();
+  const showDocNavbar = useMemo(
+    () => mobileSidebar.shouldRender && isDocPage,
+    [mobileSidebar, isDocPage]
+  );
+
+  const [open, setOpen] = useState(false);
 
   return (
     <header
       className={clsx(className, "flex flex-col justify-center  lt-md:pt-14", {
-        "md:bg-dark": isDocPage,
+        "bg-dark": isDocPage,
       })}
     >
-      <div className="flex items-center pl-4  lt-md:fixed lt-md:top-0 lt-md:inset-x-0 lt-md:bg-[var(--ifm-background-color)] lt-md:z-100 md:py-4">
+      <div className="flex items-center pl-4  lt-md:fixed lt-md:top-0 lt-md:inset-x-0 bg-dark lt-md:z-50 md:py-4">
         <Logo
           className="md:text-2xl"
           iconClassName="lt-md:w-6 lt-md:h-6"
@@ -41,7 +48,7 @@ export default function Header({ className }: PropsWithClassName) {
           </button>
         </div>
       </div>
-      {isDocPage && <DocHeader className="md:hidden" />}
+      {showDocNavbar && <DocHeader />}
     </header>
   );
 }

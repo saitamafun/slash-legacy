@@ -3,25 +3,23 @@ import { MdChevronRight } from "react-icons/md";
 import { HiOutlineMenuAlt2 } from "react-icons/hi";
 import Translate from "@docusaurus/Translate";
 
+import { useNavbarMobileSidebar } from "@docusaurus/theme-common/internal";
+import SecondaryMenu from "@theme/Navbar/MobileSidebar/SecondaryMenu";
+
 type DocHeaderProps = {
   className?: string;
 };
 
 export default function DocHeader({ className }: DocHeaderProps) {
+  const mobileSidebar = useNavbarMobileSidebar();
+
   return (
     <>
       <div className={clsx(className, "flex p-2 border-y-2 border-black")}>
         <div className="flex-1">
           <button
             className="flex items-center space-x-2 p-2"
-            onClick={() => {
-              const sidebar = document.querySelector(
-                ".theme-doc-sidebar-container"
-              ) as HTMLElement;
-
-              sidebar.style.display = "flex";
-              console.log(sidebar.style.display);
-            }}
+            onClick={() => mobileSidebar.toggle()}
           >
             <HiOutlineMenuAlt2 />
             <span className="text-sm">Menu</span>
@@ -41,6 +39,11 @@ export default function DocHeader({ className }: DocHeaderProps) {
           </button>
         </div>
       </div>
+      {mobileSidebar.shown && (
+        <div className="absolute inset-x-0 inset-t-28  bg-black/50 backdrop-blur-xl p-4 z-100 md:hidden">
+          <SecondaryMenu />
+        </div>
+      )}
     </>
   );
 }
