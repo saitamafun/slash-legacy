@@ -3,7 +3,7 @@ import { Telegraf, session } from "telegraf";
 
 import { TELEGRAM_ACCESS_TOKEN } from "./config";
 import registerBot, { authenticationMiddleware } from "./bot";
-
+import {} from "@saitamafun/wallet"
 function createBot() {
   const bot = new Telegraf(TELEGRAM_ACCESS_TOKEN);
 
